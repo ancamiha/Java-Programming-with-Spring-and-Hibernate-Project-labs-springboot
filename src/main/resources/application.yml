@@ -1,0 +1,11 @@
+spring.profiles.active: dev
+---
+spring:
+  profiles: dev
+debug: true
+---
+spring:
+  profiles: prod
+debug: false
+
+# You can specify multiple profile specific YAML documents in a single file.

@@ -2,8 +2,10 @@ package com.luxoft.bankapp.service;
 
 import com.luxoft.bankapp.exceptions.AccountNotFoundException;
 import com.luxoft.bankapp.exceptions.ClientNotFoundException;
-import com.luxoft.bankapp.exceptions.NotEnoughFundsException;
-import com.luxoft.bankapp.model.*;
+import com.luxoft.bankapp.model.Account;
+import com.luxoft.bankapp.model.CheckingAccount;
+import com.luxoft.bankapp.model.Client;
+import com.luxoft.bankapp.model.SavingAccount;
 import com.luxoft.bankapp.service.storage.Storage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;

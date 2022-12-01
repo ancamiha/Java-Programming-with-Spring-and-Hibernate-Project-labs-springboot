@@ -6,11 +6,7 @@ import com.luxoft.bankapp.service.feed.Feed;
 import com.luxoft.bankapp.service.storage.Storage;
 
 import java.io.Serializable;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Client implements Identifiable, Serializable {

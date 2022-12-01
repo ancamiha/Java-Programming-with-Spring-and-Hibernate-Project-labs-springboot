@@ -2,6 +2,7 @@ package com.luxoft.bankapp.service.demo;
 
 import com.luxoft.bankapp.service.feed.BankFeedService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +16,15 @@ public class DemoBankInitializationService implements BankInitializationService 
     @Autowired
     private BankFeedService feedService;
 
+    @Value("${feed.filename}")
+    private String fileName;
+
     @PostConstruct
     @Override
     public void createClientsForDemo() {
-        feedService.loadFeed(new File("demo.feed"));
+        if (fileName == null) {
+            fileName = "DEMO_FEED_FILE_NAME";
+        }
+        feedService.loadFeed(new File(fileName));
     }
 }

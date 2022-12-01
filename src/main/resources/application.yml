@@ -7,5 +7,7 @@ debug: true
 spring:
   profiles: prod
 debug: false
+---
+feed.filename: demo.feed
 
 # You can specify multiple profile specific YAML documents in a single file.
